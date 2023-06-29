@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>施設情報</h1>
+    <p id="displayFacilityName"></p>
+    <p id="displayFacilityAddress"></p>
+    <p id="displayManager"></p>
+    <p id="displayContactNumber"></p>
+    <p id="displayMaxCapacity"></p>
+    <button id="editButton">編集</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="editForm">
+          <div class="input-container">
+            <label for="facilityName">施設名称:</label><input type="text" id="facilityName" name="facilityName">
+          </div>
+          <div class="input-container">
+            <label for="facilityAddress">施設住所:</label><input type="text" id="facilityAddress" name="facilityAddress">
+          </div>
+          <div class="input-container">
+            <label for="manager">管理代表者:</label><input type="text" id="manager" name="manager">
+          </div>
+          <div class="input-container">
+            <label for="contactNumber">連絡番号:</label><input type="text" id="contactNumber" name="contactNumber">
+          </div>
+          <div class="input-container">
+            <label for="maxCapacity">最大収容人数:</label>
+            <div style="display: flex; align-items: center;">
+              <input type="number" id="maxCapacity" name="maxCapacity">
+              <span>名</span>
+            </div>
+          </div>
+          <label>建物用途:</label>
+          <div class="checkbox-group">
+            <div>
+              <label for="isSchool">学校:</label>
+              <input type="checkbox" id="isSchool" name="isSchool">
+            </div>
+            <div>
+              <label for="isCommunityCenter">公民館:</label>
+              <input type="checkbox" id="isCommunityCenter" name="isCommunityCenter">
+            </div>
+            <div>
+              <label for="isGym">体育館:</label>
+              <input type="checkbox" id="isGym" name="isGym">
+            </div>
+            <div>
+              <label for="isPublicFacility">公共施設:</label>
+              <input type="checkbox" id="isPublicFacility" name="isPublicFacility">
+            </div>
+            <div>
+              <label for="isOthers">その他:</label>
+              <input type="checkbox" id="isOthers" name="isOthers">
+            </div>
+          </div>
+          <input type="submit" value="保存">
+        </form>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
